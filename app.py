@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world():
-    return "Hello, World!"
+def login():
+    return "Login Page"
 
 @app.route("/hr")
 def hr():
