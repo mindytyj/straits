@@ -19,12 +19,12 @@ app = Flask(__name__)
 
 # Routes
 @app.route("/")
-def login():
+def index():
     # dbquery = connection.cursor()
     # dbquery.execute("SQL QUERY HERE")
     # dbquery.close()
     # connection.close()
-    return "Login Page"
+    return render_template("dashboard.html")
 
 @app.route("/hr")
 def hr():
