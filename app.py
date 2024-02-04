@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 
+from login import login
+
 # import os
 # from dotenv import load_dotenv
 # import mysql.connector
@@ -18,13 +20,20 @@ app = Flask(__name__)
 # )
 
 # Routes
+
 @app.route("/")
 def index():
     # dbquery = connection.cursor()
     # dbquery.execute("SQL QUERY HERE")
     # dbquery.close()
     # connection.close()
-    return render_template("dashboard.html")
+    return render_template("login.html")
+
+@app.route("/submit. methods=['POST']")
+def submit():
+    username = request.form['username']
+    password = request.form['password']
+    return login(username, password)
 
 @app.route("/hr")
 def hr():

@@ -31,7 +31,7 @@ def check_credentials(username, password):
     return user
 
 # Main function for login
-def login():
+def login(username, password):
     print("Welcome to the login page!")
     username = input("Enter your username: ")
     password = input("Enter your password: ")
