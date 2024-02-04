@@ -169,3 +169,61 @@ main-course .card h3{
     font-size:22px;
     padding:10px;
 }
+
+
+/******** current courses **********/
+.my-course{
+    margin-top:20px;
+    text-transform: capitalize;
+}
+
+.course-box{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    background:#fff;
+    border-radius: 9px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+.course-box ul{
+    list-style:none;
+    display:flex;
+}
+course-box ul li{
+    margin: 10px;
+    color: gray;
+    cursor: pointer;
+}
+.course-box ul .active{
+    color:rgba(39, 164, 168);
+    border-bottom: 1px solid rgba(39, 164, 168);
+}
+
+.box{
+    width:100%%;
+    padding:10px;
+    margin:10px;
+    border-radius:9px;
+    background:white;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.2);
+}
+.box button{
+    background: rgba(39, 164, 168);
+    color:white;
+    padding:7px 10px;
+    border-radius:10px;
+    margin-top: 3reml;
+    cursor: pointer;
+}
+
+.box button:hover{
+    background:gray;
+}
+.box i{
+    font-size: 7rem;
+    float:right;
+    margin: -20px 20px 20px 0;
+}
+.html{
+    color: rgba(39, 164, 168);
+}
