@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify, url_for
 from config import database
+from login import check_credentials
+from flask import redirect
 from login import login
 
 app = Flask(__name__)
@@ -13,24 +15,20 @@ def index():
     dbquery.close()
     return render_template("dashboard.html", courses=courses)
 
-def login():
-    # dbquery = connection.cursor()
-    # dbquery.execute("SQL QUERY HERE")
-    # dbquery.close()
-    # connection.close()
+def login_page():
     return render_template("login.html")
 
 @app.route("/submit. methods=['POST']")
 def submit():
-    username = request.form['username']
+    username = request.form['email']
     password = request.form['password']
 
-    dbquery = database.connection.cursor()
-    dbquery.execute(f"SELECT Username, Password FROM Users WHERE Username = `{username}` AND Password = `{password}`);")
-    dbquery.close()
-    database.connection.close()
+    user = check_credentials(username, password)
 
-    return
+    if user:
+        return redirect(url_for('index'))
+    else:
+        return jsonify({"success": False})
 
 @app.route("/hr")
 def hr():

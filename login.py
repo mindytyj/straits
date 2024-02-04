@@ -1,5 +1,6 @@
 import mysql.connector
 
+
 # Function to connect to the MySQL database
 def connect_db():
     conn = mysql.connector.connect(
@@ -12,26 +13,21 @@ def connect_db():
     return conn, dbquery
 
 # Function to check user credentials
-def check_credentials(username, password):
+def check_credentials(email, password):
     conn, dbquery = connect_db()
-    dbquery.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
+    dbquery.execute("SELECT * FROM Users WHERE Email = %s AND Password = %s", (email, password))
     user = dbquery.fetchone()
     conn.close()
     return user
 
 # Main function for login
-def login(username, password):
-    print("Welcome to the login page!")
-    username = input("Enter your username: ")
-    password = input("Enter your password: ")
-
-    user = check_credentials(username, password)
+def login(email, password):
+    user = check_credentials(email, password)
 
     if user:
-        print(f"Welcome, {user[0]}!")
-        print(f"You are logged in as a {user[2]}")
+        return f"Welcome, {user[0]}!<br>You are logged in as a {user[2]}"
     else:
-        print("Invalid username or password.")
+        return "Invalid username or password."
 
 if __name__ == "__main__":
     login()
