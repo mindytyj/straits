@@ -77,20 +77,32 @@ body {
     border-radius:50%;
 }
 .header-wrapper{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
     background: #fff;
     border-radius: 10px;
     padding: 10px 2rem;
     margin-bottom: 1rem;
 }
+
 .header-title {
     color: rgba(39, 164, 168);
-    display: grid;
-    grid-template-columns: auto auto;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.title {
+display: flex;
+flex-direction: column;
+}
+
+.user {
+display: flex;
+flex-direction: column
+}
+
+img {
+float: right;
 }
 
 .search-box{
