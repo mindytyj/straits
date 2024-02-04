@@ -1,28 +1,22 @@
 from flask import Flask, render_template, request
+from config import database
 
 from login import login
 
-# import os
-# from dotenv import load_dotenv
-# import mysql.connector
-#
-# load_dotenv(".env")
-#
 app = Flask(__name__)
-#
-# # Database Configuration
-# connection = mysql.connector.connect(
-#     user=os.getenv('DB_USER'),
-#     password=os.getenv('DB_PASSWORD'),
-#     host=os.getenv('DB_HOST'),
-#     port=os.getenv('DB_PORT'),
-#     database=os.getenv('DB_NAME')
-# )
+
+dbquery = database.connection.cursor()
+dbquery.execute("")
+dbquery.close()
+database.connection.close()
 
 # Routes
 
 @app.route("/")
 def index():
+    return render_template("dashboard.html")
+
+def login():
     # dbquery = connection.cursor()
     # dbquery.execute("SQL QUERY HERE")
     # dbquery.close()
