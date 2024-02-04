@@ -89,6 +89,8 @@ body {
 }
 .header-title {
     color: rgba(39, 164, 168);
+    display: grid;
+    grid-template-columns: 350px 350px;
 }
 
 .search-box{
