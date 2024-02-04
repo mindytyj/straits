@@ -89,21 +89,13 @@ flex-direction: row;
 justify-content: space-between;
     margin-bottom: 20px;
 }
-
-.title {
+.title, .user {
 display: flex;
 flex-direction: column;
 }
-
-.user {
-display: flex;
-flex-direction: column
-}
-
 img {
 float: right;
 }
-
 .search-box{
     background: rgb(237, 237, 237);
     border-radius: 15px;
@@ -126,7 +118,10 @@ float: right;
 .search-box i:hover{
     transform: scale(1.2);
 }
-
+.main-skills {
+display: flex;
+flex-wrap: wrap;
+}
 .card-container{
     background:#fff;
     padding: 2rem;
