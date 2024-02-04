@@ -1,19 +1,17 @@
 from flask import Flask, render_template, request
 from config import database
-
 from login import login
 
 app = Flask(__name__)
 
-dbquery = database.connection.cursor()
-dbquery.execute("")
-dbquery.close()
-database.connection.close()
-
 # Routes
 @app.route("/")
 def index():
-    return render_template("dashboard.html")
+    dbquery = database.connection.cursor(dictionary=True)
+    dbquery.execute("SELECT CourseID, CourseName, TrainingHours FROM Courses;")
+    courses = dbquery.fetchall()
+    dbquery.close()
+    return render_template("dashboard.html", courses=courses)
 
 def login():
     # dbquery = connection.cursor()
@@ -26,7 +24,13 @@ def login():
 def submit():
     username = request.form['username']
     password = request.form['password']
-    return login(username, password)
+
+    dbquery = database.connection.cursor()
+    dbquery.execute(f"SELECT Username, Password FROM Users WHERE Username = `{username}` AND Password = `{password}`);")
+    dbquery.close()
+    database.connection.close()
+
+    return
 
 @app.route("/hr")
 def hr():
