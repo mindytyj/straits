@@ -4,7 +4,6 @@ INSERT INTO Roles (Role) VALUES ('HR Officer');
 INSERT INTO Roles (Role) VALUES ('HR Supervisor');
 
 CREATE TABLE Users (UserID int AUTO_INCREMENT NOT NULL, FirstName varchar(50) NOT NULL, LastName varchar(50) NOT NULL, Email varchar(50) NOT NULL, Password varchar(50) NOT NULL, RoleID int NOT NULL, PRIMARY KEY (UserID), FOREIGN KEY (RoleID) REFERENCES Roles(RoleID));
-INSERT INTO Users (FirstName, LastName, Email, Password, RoleID) VALUES ('Admin', 'Admin', 'admin@straits.com', 'admin', 3);
 
 CREATE TABLE Categories (CategoryID int AUTO_INCREMENT NOT NULL, Category varchar(100) NOT NULL, PRIMARY KEY (CategoryID));
 
