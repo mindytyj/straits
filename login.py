@@ -3,30 +3,19 @@ import mysql.connector
 # Function to connect to the MySQL database
 def connect_db():
     conn = mysql.connector.connect(
-        host="your_host",
-        user="your_username",
-        password="your_password",
-        database="your_database"
+        host="aws.connect.psdb.cloud",
+        user="l1l50h3kzfg5au95tb1l",
+        password="pscale_pw_SsfP659iLdnmQWE85VJuRj9TJTgXb4wfM42zNguojaP",
+        database="straits"
     )
-    cursor = conn.cursor()
-
-    # Create table if not exists
-    cursor.execute('''CREATE TABLE IF NOT EXISTS users
-                    (username VARCHAR(255) PRIMARY KEY, password VARCHAR(255), role VARCHAR(255))''')
-
-    # Sample data - You can replace it with your actual data
-    cursor.execute("INSERT IGNORE INTO users VALUES ('john', 'password123', 'staff')")
-    cursor.execute("INSERT IGNORE INTO users VALUES ('emma', 'pass456', 'hr_officer')")
-    cursor.execute("INSERT IGNORE INTO users VALUES ('alex', 'abc123', 'hr_supervisor')")
-
-    conn.commit()
-    return conn, cursor
+    dbquery = conn.cursor()
+    return conn, dbquery
 
 # Function to check user credentials
 def check_credentials(username, password):
-    conn, cursor = connect_db()
-    cursor.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
-    user = cursor.fetchone()
+    conn, dbquery = connect_db()
+    dbquery.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
+    user = dbquery.fetchone()
     conn.close()
     return user
 

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from config import database
+from login import check_credentials
 
 from login import login
 
@@ -24,9 +25,11 @@ def login():
 
 @app.route("/submit. methods=['POST']")
 def submit():
-    username = request.form['username']
+    username = request.form['email']
     password = request.form['password']
-    return login(username, password)
+
+    user = check_credentials(username, password)
+
 
 @app.route("/hr")
 def hr():
