@@ -11,7 +11,6 @@ dbquery.close()
 database.connection.close()
 
 # Routes
-
 @app.route("/")
 def index():
     return render_template("dashboard.html")
