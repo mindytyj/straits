@@ -7,16 +7,15 @@
     box-sizing: border-box;
 }
 body {
-    display:flex;
+    display: grid;
+    grid-template-columns: 200px auto;
 }
 .sidebar {
-    positon:sticky;
+    position: sticky;
     top:0;
     left:0;
     bottom:0;
-    width:240px;
     height:100vh;
-    padding:0 1.7rem;
     color: #fff;
     overflow: hidden;
     transition: all 0.5 linear;
@@ -90,7 +89,8 @@ body {
 .header-title {
     color: rgba(39, 164, 168);
     display: grid;
-    grid-template-columns: 350px 350px;
+    grid-template-columns: auto auto;
+    margin-bottom: 20px;
 }
 
 .search-box{
