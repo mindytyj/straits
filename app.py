@@ -29,9 +29,9 @@ def submit():
         if user:
             return redirect(url_for('dashboard'))
         else:
-            return jsonify({"success": False})
-    else:
-        return redirect(url_for('login'))
+            error = "Invalid email or password"
+
+    return render_template('login.html', error=error)
 
 @app.route("/courses")
 def courses():
