@@ -50,6 +50,11 @@
          font-weight:bold;
       }
 
+      .error-message {
+         color: red;
+         font-weight:bold;
+      }
+
       #sub {
          width: 150px;
          margin: auto;
@@ -71,15 +76,17 @@
 <body>
    <div class="container">
       <h1>Login</h1>
-      {% if error %}
-      <div class="error-message">{{ error }}</div>
-      {% endif %}
+
       <form id="loginForm" action="/login" method="post">
          <label for="email">Email:</label>
          <input type="text" id="email" name="email" required>
          <label for="password">Password:</label>
          <input type="password" id="password" name="password" required>
          <input type="submit" value="Submit" id="sub">
+         <br>
+         {% if error %}
+            <div class="error-message">{{ error }}</div>
+         {% endif %}
       </form>
    </div>
 </body>
