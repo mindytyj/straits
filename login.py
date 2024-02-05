@@ -18,6 +18,7 @@ def login(email, password):
         return f"Welcome, {user[0]}!<br>You are logged in as a {user[2]}"
     else:
         return "Invalid username or password."
-"""
+
 if __name__ == "__main__":
     login()
+"""
