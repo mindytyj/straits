@@ -7,18 +7,19 @@ from login import login
 app = Flask(__name__)
 
 # Routes
-@app.route("/")
-def index():
+@app.route("/dashboard")
+def dashboard():
     dbquery = database.connection.cursor(dictionary=True)
     dbquery.execute("SELECT CourseID, CourseName, TrainingHours FROM Courses;")
     courses = dbquery.fetchall()
     dbquery.close()
     return render_template("dashboard.html", courses=courses)
 
-def login_page():
-    return render_template("login.html")
+@app.route("/")
+def login():
+        return render_template("login.html")
 
-@app.route("/submit. methods=['POST']")
+@app.route("/login", methods=['GET', 'POST'])
 def submit():
     if request.method == 'POST':
         username = request.form['email']
@@ -26,11 +27,11 @@ def submit():
         user = check_credentials(username, password)
 
         if user:
-            return redirect(url_for('index'))
+            return redirect(url_for('dashboard'))
         else:
             return jsonify({"success": False})
     else:
-        return render_template("login.html")
+        return redirect(url_for('login'))
 
 @app.route("/courses")
 def courses():
