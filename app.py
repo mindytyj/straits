@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, url_for
 from config import database
 from login import check_credentials
 from flask import redirect
-from login import login
+
 
 app = Flask(__name__)
 
