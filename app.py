@@ -7,14 +7,6 @@ from login import login
 app = Flask(__name__)
 
 # Routes
-@app.route("/dashboard")
-def dashboard():
-    dbquery = database.connection.cursor(dictionary=True)
-    dbquery.execute("SELECT CourseID, CourseName, TrainingHours FROM Courses;")
-    courses = dbquery.fetchall()
-    dbquery.close()
-    return render_template("dashboard.html", courses=courses)
-
 @app.route("/")
 def login():
         return render_template("login.html")
@@ -32,6 +24,14 @@ def submit():
             return jsonify({"success": False})
     else:
         return redirect(url_for('login'))
+
+@app.route("/dashboard")
+def dashboard():
+    dbquery = database.connection.cursor(dictionary=True)
+    dbquery.execute("SELECT CourseID, CourseName, TrainingHours FROM Courses;")
+    courses = dbquery.fetchall()
+    dbquery.close()
+    return render_template("dashboard.html", courses=courses)
 
 @app.route("/courses")
 def courses():
