@@ -20,15 +20,17 @@ def login_page():
 
 @app.route("/submit. methods=['POST']")
 def submit():
-    username = request.form['email']
-    password = request.form['password']
+    if request.method == 'POST':
+        username = request.form['email']
+        password = request.form['password']
+        user = check_credentials(username, password)
 
-    user = check_credentials(username, password)
-
-    if user:
-        return redirect(url_for('index'))
+        if user:
+            return redirect(url_for('index'))
+        else:
+            return jsonify({"success": False})
     else:
-        return jsonify({"success": False})
+        return render_template("login.html")
 
 @app.route("/hr")
 def hr():

@@ -1,23 +1,12 @@
-import mysql.connector
+from config import database
 
-
-# Function to connect to the MySQL database
-def connect_db():
-    conn = mysql.connector.connect(
-        host="",
-        user="",
-        password="",
-        database=""
-    )
-    dbquery = conn.cursor()
-    return conn, dbquery
 
 # Function to check user credentials
 def check_credentials(email, password):
-    conn, dbquery = connect_db()
+    dbquery = database.connection.cursor(dictionary=True)
     dbquery.execute("SELECT * FROM Users WHERE Email = %s AND Password = %s", (email, password))
     user = dbquery.fetchone()
-    conn.close()
+    dbquery.close()
     return user
 
 # Main function for login
