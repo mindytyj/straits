@@ -4,10 +4,10 @@ import mysql.connector
 # Function to connect to the MySQL database
 def connect_db():
     conn = mysql.connector.connect(
-        host="aws.connect.psdb.cloud",
-        user="l1l50h3kzfg5au95tb1l",
-        password="pscale_pw_SsfP659iLdnmQWE85VJuRj9TJTgXb4wfM42zNguojaP",
-        database="straits"
+        host="",
+        user="",
+        password="",
+        database=""
     )
     dbquery = conn.cursor()
     return conn, dbquery
