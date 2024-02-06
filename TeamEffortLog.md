@@ -50,7 +50,7 @@
  ###    Sprint 1 (University Week 3):
  *  Assignment - creating user stories for each role 
   *   Time taken to complete - 1 Hours
-     *  Comments (if any) -  according to the project to build up each role user stories and simplify the  issue facing.
+     *  Comments (if any) -  according to the project to build up each role user stories and simplify the issue facing.
  ### Sprint 2 (University Week 4):
  *   Assignment - assist by Mandy to create the database
    * Time taken to complete - 4 hour
