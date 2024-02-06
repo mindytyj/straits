@@ -2,9 +2,13 @@
 
 ## Login Page
 
+![Login Page](https://i.imgur.com/Lm0cfP5.png)
+
 When the user first enters the website, they will be greeted with a login page.
 
 Once the user has keyed in their email and password, they can click on the Submit button to login.
+
+![Login Page Showing Error Message](https://i.imgur.com/36N4Lvh.png)
 
 The user’s credentials will be checked against the database. 
 
@@ -14,6 +18,8 @@ In the future version, users will be able to register for an account. The securi
 
 
 ## Dashboard
+
+![Dashboard Page](https://i.imgur.com/MFU2AcE.png)
 
 Once the user has successfully logged into their account, they will be directed to the Dashboard page. 
 
@@ -38,6 +44,8 @@ Completed - Users will be able to view the courses that they have completed.
 
 ## Courses
 
+![Courses Page](https://i.imgur.com/sdAuqKh.png)
+
 When the user registers for a course through the Sign Up button, the user will be directed to the Courses page.
 
 The user will be able to view all the courses that they have registered for.
@@ -55,7 +63,9 @@ In the future version, the registered course will show the details of the course
 
 ## Data Modeling
 
-The data model below reflects the current database schema of the MVP Product Demonstration.
+![DB Schema](https://i.imgur.com/EyXwfLh.png)
+
+The data model above reflects the current database schema of the MVP Product Demonstration.
 
 The data model will be updated in the future to reflect new data required for the future version of the product.
 
