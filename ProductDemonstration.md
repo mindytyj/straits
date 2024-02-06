@@ -52,3 +52,10 @@ The Register for Course button will redirect the user to the Dashboard page for 
 
 In the future version, the registered course will show the details of the course and the date and time of the course the user has registered for. The registered courses will only reflect courses with present and future dates.
 
+
+## Data Modeling
+
+The data model below reflects the current database schema of the MVP Product Demonstration.
+
+The data model will be updated in the future to reflect new data required for the future version of the product.
+
