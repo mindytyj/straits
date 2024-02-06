@@ -40,7 +40,7 @@
   ### Sprint 2 (University Week 4):
   *  Assignment - creating login validation 
 	*  Time taken to complete - 4 hours
-	  * Comments (if any) - As I was new to Python , I spent more time researching the linking with the database.
+	  * Comments (if any) -- As I was new to Python , I spent more time researching console programs and linking with the database.
   ### Sprint 3 (University Week 5):
   *    Assignment - assisting weikang with login page
 	*   Time taken to complete - 3 hours
