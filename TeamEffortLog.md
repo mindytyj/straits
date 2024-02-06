@@ -17,7 +17,7 @@
  ### Sprint 1 (University Week 3 ):
  * Assignment - To work on the project backlog
 	* Time taken to complete - 2  hours
-	  *  Comments (if any) - Took a lot of time to understand how to use the excel template provided, and break down the project to the teammates 
+	  *  Comments (if any) - Focus on a single user role based on the persona and break down the project into tasks to be completed by the team.
  ### Sprint 2 (University Week 4): 
  *  Assignment - Creating ERD for the project 
     *  Time taken to complete - 2  hours
@@ -29,7 +29,8 @@
 
  *    Assignment - create course detail in database 
     *  Time taken to complete - 4 hours 
-      *  Comments (if any) -. took some time to create course detail to be accessed from the database. 
+      *  Comments (if any) -. Researched and read documentation on how to execute SQL queries on flask and how to reflect returned data from the database into the templates on flask.
+ 
 
  ##  Team member - Bala
  ###  Sprint 1 (University Week 3 ):
