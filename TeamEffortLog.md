@@ -54,7 +54,7 @@
  ### Sprint 2 (University Week 4):
  *   Assignment - assist by Mandy to create the database
    * Time taken to complete - 4 hour
-	  * Comments (if any) -doing more research to to understand database concept and  create a database to store user data
+	  * Comments (if any) -doing more research to understand database concept and  create a database to store user data
  ### Sprint 3  (University Week 4):
  * Assignment - creating login page  
    *    Time taken to complete - 4 hour
