@@ -25,7 +25,7 @@
  ### Sprint 3 (University Week 5):
  *    Assignment - Setup the database with MySQL and configure with local environment to run the project 
 	*  Time taken to complete - 4 hours
-      *  Comments (if any) -. Researched on which serverless MySQL platform to use so that the team can connect to thetook some time to resolve the errors for the connection to the database.
+      *  Comments (if any) -. Researched on which serverless MySQL platform to use so that the team can connect took some time to resolve the errors for the connection to the database.
 
  *    Assignment - create course detail in database 
     *  Time taken to complete - 4 hours 
